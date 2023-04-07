@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "email": "a@a.com",
+      "password": "10101010",
+      "id": 1,
+      "name": "Saul Goodman",
+      "department": "Developer",
+      "phone": "(090) 123-4567"
+    },
+    {
+      "email": "b@b.com",
+      "password": "12345678",
+      "name": "Mike Bueno",
+      "department": "Developer",
+      "phone": "(090) 101-0101",
+      "id": 2
+    },
+    {
+      "email": "c@c.com",
+      "password": "abcdefgh",
+      "name": "Gustavo Fring",
+      "department": "Human Resources",
+      "phone": "(090) 555-6666",
+      "id": 3
+    }
+  ]
+}

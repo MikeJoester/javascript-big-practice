@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/index.css" />
+  <title>Login</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="container container--login">
+      <div class="login__header">
+        <img src="../assets/Icons/114-user.svg" alt="user pic" class="header__img" />
+      </div>
+      <form name="register" class="form__main" id="login">
+        <div class="form__header">
+          <h1>member login</h1>
+        </div>
+        <div class="form__body">
+          <div class="form__elem">
+            <label for="email"></label>
+            <input type="email" class="form__input" name="email" id="email" placeholder="Email..."></input>
+          </div>
+
+          <div class="form__elem">
+            <label for="pass"></label>
+            <input type="password" class="form__input" name="pass" id="pass" autocomplete="on"
+              placeholder="Password..."></input>
+          </div>
+        </div>
+        <div class="form__footer">
+          <p id="alert" class="form__alert"></p>
+          <input type="submit" class="form__button" name="submit" value="Login"></input>
+        </div>
+      </form>
+
+    </div>
+    <div class="login__footer">
+      <a href="javascript:void(0)" class="footer__link">Forgot Password?</a>
+    </div>
+  </div>
+  <script src="../scripts/login.js"></script>
+</body>
+
+</html>
