@@ -8,13 +8,12 @@ form.addEventListener("submit", async (e) => {
     password: document.getElementById("pass").value,
   };
 
-  const res = await fetch("http://localhost:3000/login", {
-    method: "POST",
+  const res = await fetch("http://localhost:3000/users", {
+    method: "GET",
     mode: "cors",
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify(input),
   });
 
   if (!res.ok) {
@@ -22,6 +21,18 @@ form.addEventListener("submit", async (e) => {
   }
 
   data = await res.json();
-  alert(`Hello ${data.user.name}!`);
-  sessionStorage.setItem("user", JSON.stringify(data));
+  if (validateUser(data, input)) {
+    alert("Success!");
+  } else {
+    alert("Wrong Password!");
+  }
 });
+
+function validateUser(data, input) {
+  for (e of data) {
+    if (e.email === input.email && e.password === input.password) {
+      return true;
+    }
+  }
+  return false;
+}
