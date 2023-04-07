@@ -1,0 +1,20 @@
+{
+  "dependencies": {
+    "json-server": "^0.17.3",
+    "prettier": "^2.8.7"
+  },
+  "devDependencies": {
+    "parcel": "^2.8.3"
+  },
+  "name": "javascript-big-practice",
+  "description": "",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "json-server ./src/data/data.json",
+    "start": "parcel ./src/pages/login.html"
+  },
+  "author": "",
+  "license": "ISC"
+}
