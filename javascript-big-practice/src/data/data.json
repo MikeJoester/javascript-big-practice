@@ -1,0 +1,37 @@
+{
+  "users": [
+    {
+      "email": "admin@admin.com",
+      "password": "abcd1234",
+      "id": 0
+    },
+    {
+      "email": "admin@temp.com",
+      "password": "abcdabcd",
+      "id": 1
+    }
+  ],
+  "employees": [
+    {
+      "email": "a@a.com",
+      "id": 1,
+      "name": "Saul Goodman",
+      "department": "Developer",
+      "phone": "(090) 123-4567"
+    },
+    {
+      "email": "b@b.com",
+      "name": "Mike Bueno",
+      "department": "Developer",
+      "phone": "(090) 101-0101",
+      "id": 2
+    },
+    {
+      "email": "c@c.com",
+      "name": "Gustavo Fring",
+      "department": "Human Resources",
+      "phone": "(090) 555-6666",
+      "id": 3
+    }
+  ]
+}
