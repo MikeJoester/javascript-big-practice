@@ -1,34 +1,45 @@
-const form = document.getElementById("login");
-let data;
+import { getUser } from "./utils/handleFetchAPI";
+import STORAGE_KEYS from "./constants/storageKeys";
+import EMAIL_REGEX_PATTERN from "./constants/constants";
+import LocalStorage from "./utils/localStorage";
+import { selectDOMId } from "./utils/querySelectorDOM";
 
-form.addEventListener("submit", async (e) => {
+selectDOMId("login").addEventListener("submit", function (e) {
   e.preventDefault();
   const input = {
-    email: document.getElementById("email").value,
-    password: document.getElementById("pass").value,
+    email: selectDOMId("email").value,
+    password: selectDOMId("pass").value,
   };
-
-  const res = await fetch("http://localhost:3000/users", {
-    method: "GET",
-    mode: "cors",
-    headers: {
-      "Content-Type": "application/json",
-    },
-  });
-
-  if (!res.ok) {
-    alert(`Error ${res.status}: ${res.statusText}!`);
-  }
-
-  data = await res.json();
-  if (validateUser(data, input)) {
-    alert("Success!");
-  } else {
-    alert("Wrong Password!");
+  if (validateForm(input)) {
+    if (isValidUser(getUser(), input)) {
+    } else {
+      alert("Wrong email or password!");
+    }
   }
 });
 
-function validateUser(data, input) {
+const validateForm = (data) => {
+  function validateEmail(email) {
+    if (email.match(EMAIL_REGEX_PATTERN)) {
+      return true;
+    }
+    alert("Invalid email address!");
+    return false;
+  }
+
+  function validatePass(pass) {
+    const passLen = pass.length;
+    if (passLen == 0) {
+      alert("User password should not be empty!");
+      return false;
+    }
+    return true;
+  }
+
+  return validateEmail(data.email) && validatePass(data.password);
+};
+
+function isValidUser(data, input) {
   for (e of data) {
     if (e.email === input.email && e.password === input.password) {
       return true;
