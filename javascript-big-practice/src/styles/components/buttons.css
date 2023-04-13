@@ -1,4 +1,4 @@
-.form__button {
+.form-button {
   width: 100%;
   cursor: pointer;
   color: var(--cl-white);
@@ -10,10 +10,10 @@
   border: 1px solid transparent;
 }
 
-.form__button:hover {
+.form-button:hover {
   border: 1px solid var(--cl-black);
 }
 
-.form__button:active {
+.form-button:active {
   background-color: var(--cl-paper-light);
 }
