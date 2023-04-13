@@ -1,7 +1,6 @@
 import { getUser } from "./utils/handleFetchAPI";
 import STORAGE_KEYS from "./constants/storageKeys";
 import EMAIL_REGEX_PATTERN from "./constants/constants";
-import LocalStorage from "./utils/localStorage";
 import { selectDOMId } from "./utils/querySelectorDOM";
 
 selectDOMId("login").addEventListener("submit", function (e) {
@@ -16,6 +15,7 @@ selectDOMId("login").addEventListener("submit", function (e) {
       .then((res) => {
         if (isValidUser(res, input)) {
           alert("Login Success!");
+          window.location.href = "./main.html";
         } else {
           alert("Wrong email or password!");
         }
@@ -51,7 +51,7 @@ const validateForm = (data) => {
 function isValidUser(data, input) {
   for (e of data) {
     if (e.email === input.email && e.password === input.password) {
-      LocalStorage.setItems("userData", e);
+      localStorage.setItem(STORAGE_KEYS.USER_ID, e);
       return true;
     }
   }
