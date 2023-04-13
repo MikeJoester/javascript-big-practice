@@ -6,25 +6,34 @@ import { selectDOMId } from "./utils/querySelectorDOM";
 
 selectDOMId("login").addEventListener("submit", function (e) {
   e.preventDefault();
+
   const input = {
     email: selectDOMId("email").value,
     password: selectDOMId("pass").value,
   };
   if (validateForm(input)) {
-    if (isValidUser(getUser(), input)) {
-    } else {
-      alert("Wrong email or password!");
-    }
+    getUser()
+      .then((res) => {
+        if (isValidUser(res, input)) {
+          alert("Login Success!");
+        } else {
+          alert("Wrong email or password!");
+        }
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   }
 });
 
 const validateForm = (data) => {
   function validateEmail(email) {
-    if (email.match(EMAIL_REGEX_PATTERN)) {
+    if (EMAIL_REGEX_PATTERN.test(email)) {
       return true;
+    } else {
+      alert("Wrong email format!");
+      return false;
     }
-    alert("Invalid email address!");
-    return false;
   }
 
   function validatePass(pass) {

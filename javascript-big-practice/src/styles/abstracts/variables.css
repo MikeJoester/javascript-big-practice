@@ -10,16 +10,21 @@
   #Colors
   \*------------------------------------*/
   --cl-white: #fff;
+  --cl-paper: #ecf0f1;
+  --cl-paper-light: #e3dbdb;
   --cl-gray: #7f7f7f;
+  --cl-lightgray: #bdbfbf;
+  --cl-black: #080705;
+  --cl-ph-text: #808080;
+  --cl-red: #ff0022;
+  --cl-cyan: #61c7c1;
 
   --primary-color: var(--cl-white);
-  --secondary-color: var(--cl-gold);
-  --secondary-dark: var(--cl-darkgold);
-  --light-color: var(--cl-lightgray);
-  --title-color: var(--cl-pianoblack);
-  --border-color: var(--cl-gray);
+  --placeholder-color: var(--cl-ph-text);
+  --secondary-color: var(--cl-cyan);
+  --alert-color: var(--cl-red);
+  --border-color: var(--cl-lightgray);
   --input-bg: var(--cl-paper);
-  --input-border: var(--cl-dustygray);
 
   /*------------------------------------*\
   #Font Weight

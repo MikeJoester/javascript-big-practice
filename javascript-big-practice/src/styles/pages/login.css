@@ -78,17 +78,17 @@
   font-size: 1rem;
   width: 18rem;
   border-radius: 0.2rem;
-  background-color: #fff;
-  border: 1px solid #bdbfbf;
+  background-color: var(--cl-white);
+  border: 1px solid var(--border-color);
 }
 
 .form__input:hover {
-  border: 1px solid #000;
-  background-color: #ecf0f1;
+  border: 1px solid var(--cl-black);
+  background-color: var(--cl-paper);
 }
 
 .form__input::placeholder {
-  color: #808080;
+  color: var(--placeholder-color);
 }
 
 .form__footer {
@@ -101,31 +101,11 @@
 
 .form__alert {
   text-align: center;
-  color: #ff0022;
-}
-
-.form__button {
-  width: 100%;
-  cursor: pointer;
-  color: #fff;
-  background-color: #61c7c1;
-  padding: 0.6rem 0rem;
-  border-radius: 0.2rem;
-  font-size: 1.1rem;
-  font-weight: var(--font-weight-mediumbold);
-  border: 1px solid transparent;
-}
-
-.form__button:hover {
-  border: 1px solid #080705;
-}
-
-.form__button:active {
-  background-color: #e3dbdb;
+  color: var(--alert-color);
 }
 
 .login__footer {
-  background-color: #ecf0f1;
+  background-color: var(--cl-paper);
   text-align: center;
   padding: 1rem 0rem;
   width: 100%;
@@ -135,9 +115,9 @@
 
 .footer__link {
   text-decoration: none;
-  color: #bdbfbf;
+  color: var(--border-color);
 }
 
 .footer__link:hover {
-  color: #000;
+  color: var(--cl-black);
 }
