@@ -110,6 +110,11 @@
   border-bottom-right-radius: 0.5rem;
 }
 
+.alert-text {
+  margin-top: 1rem;
+  color: var(--cl-red);
+}
+
 .footer-link {
   text-decoration: none;
   color: var(--border-color);

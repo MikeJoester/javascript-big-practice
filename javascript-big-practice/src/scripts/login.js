@@ -1,8 +1,10 @@
-import { getUser } from "./utils/handleFetchAPI";
+import { getUser } from "./utils/getAPI";
 import STORAGE_KEYS from "./constants/storageKeys";
 import EMAIL_REGEX_PATTERN from "./constants/constants";
 import { selectDOMId } from "./utils/querySelectorDOM";
+import * as dotenv from "dotenv";
 
+const alert = selectDOMId("alert");
 selectDOMId("login").addEventListener("submit", function (e) {
   e.preventDefault();
 
@@ -14,10 +16,9 @@ selectDOMId("login").addEventListener("submit", function (e) {
     getUser()
       .then((res) => {
         if (isValidUser(res, input)) {
-          alert("Login Success!");
           window.location.href = "./main.html";
         } else {
-          alert("Wrong email or password!");
+          alert.innerHTML = "Wrong email or password!";
         }
       })
       .catch((err) => {
@@ -31,7 +32,7 @@ const validateForm = (data) => {
     if (EMAIL_REGEX_PATTERN.test(email)) {
       return true;
     } else {
-      alert("Wrong email format!");
+      alert.innerHTML = "Wrong email format!";
       return false;
     }
   }
@@ -39,7 +40,7 @@ const validateForm = (data) => {
   function validatePass(pass) {
     const passLen = pass.length;
     if (passLen == 0) {
-      alert("User password should not be empty!");
+      alert.innerHTML = "User password should not be empty!";
       return false;
     }
     return true;
