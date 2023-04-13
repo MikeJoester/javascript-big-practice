@@ -51,6 +51,7 @@ const validateForm = (data) => {
 function isValidUser(data, input) {
   for (e of data) {
     if (e.email === input.email && e.password === input.password) {
+      LocalStorage.setItems("userData", e);
       return true;
     }
   }
