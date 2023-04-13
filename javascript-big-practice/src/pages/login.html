@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/index.css" />
+  <title>Login</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="login-container">
+      <div class="login-header">
+        <span class="icon icon-user header-icon"></span>
+      </div>
+      <form name="register" class="form" id="login">
+        <div class="form-header">
+          <h1>login</h1>
+        </div>
+        <div class="form-body">
+          <div class="form-elem">
+            <label for="email"></label>
+            <input type="text" class="form-input" name="email" id="email" placeholder="Email..."></input>
+          </div>
+
+          <div class="form-elem">
+            <label for="password"></label>
+            <input type="password" class="form-input" name="password" id="pass" autocomplete="on"
+              placeholder="Password..."></input>
+          </div>
+        </div>
+        <div class="form-footer">
+          <button type="submit" class="form-button" name="submit" title="Login">Login</button>
+        </div>
+        <span class="alert-text" id="alert"></span>
+      </form>
+    </div>
+    <div class="login-footer">
+      <a href="javascript:void(0)" class="footer-link">Forgot Password?</a>
+    </div>
+  </div>
+  <script type="module" src="../scripts/login.js"></script>
+</body>
+
+</html>

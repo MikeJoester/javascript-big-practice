@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+:root {
+  /*------------------------------------*\
+  #Font Families
+  \*------------------------------------*/
+  --font-primary: "Roboto", sans-serif;
+
+  /*------------------------------------*\
+  #Colors
+  \*------------------------------------*/
+  --cl-white: #fff;
+  --cl-paper: #ecf0f1;
+  --cl-paper-light: #e3dbdb;
+  --cl-gray: #7f7f7f;
+  --cl-lightgray: #bdbfbf;
+  --cl-black: #080705;
+  --cl-ph-text: #808080;
+  --cl-red: #ff0022;
+  --cl-cyan: #61c7c1;
+
+  --primary-color: var(--cl-white);
+  --placeholder-color: var(--cl-ph-text);
+  --secondary-color: var(--cl-cyan);
+  --alert-color: var(--cl-red);
+  --border-color: var(--cl-lightgray);
+  --input-bg: var(--cl-paper);
+
+  /*------------------------------------*\
+  #Font Weight
+  \*------------------------------------*/
+  --font-weight-light: 300;
+  --font-weight-mediumlight: 400;
+  --font-weight-semibold: 500;
+  --font-weight-mediumbold: 700;
+
+  /*------------------------------------*\
+  #Font Size
+  \*------------------------------------*/
+  --font-size-sm: 16px;
+  --font-size-xs: 11px;
+  --font-size-h-xs: 12px;
+  --font-size-mb: 20px;
+  --font-size-tb: 32px;
+  --font-size-md: 18px;
+  --font-size-lg: 24px;
+  --font-size-x-lg: 30px;
+  --font-size-xx-lg: 36px;
+  --font-size-xxx-lg: 44px;
+  --font-size-4xl: 64px;
+
+  /*------------------------------------*\
+  #Line Height
+  \*------------------------------------*/
+  --line-height-sm: 20px;
+  --line-height-md: 24px;
+  --line-height-lg: 30px;
+  --line-height-x-lg: 40px;
+  --line-height-xx-lg: 42px;
+  --line-height-xxx-lg: 60px;
+}

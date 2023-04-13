@@ -1,0 +1,19 @@
+.form-button {
+  width: 100%;
+  cursor: pointer;
+  color: var(--cl-white);
+  background-color: var(--secondary-color);
+  padding: 0.6rem 0rem;
+  border-radius: 0.2rem;
+  font-size: 1.1rem;
+  font-weight: var(--font-weight-mediumbold);
+  border: 1px solid transparent;
+}
+
+.form-button:hover {
+  border: 1px solid var(--cl-black);
+}
+
+.form-button:active {
+  background-color: var(--cl-paper-light);
+}
